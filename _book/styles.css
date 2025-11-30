@@ -1,0 +1,132 @@
+/* ----------------------------------------------------
+   Digital Leaders Academy – Modern Tech/AI Webbook
+   styles.css
+----------------------------------------------------- */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap');
+
+/* --- GLOBAL STYLES --- */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F4F7FA;
+    color: #2A2A2A;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADINGS */
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    color: #0043A4;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin-top: 2rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.9rem;
+    margin-top: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* LINKS */
+a {
+    color: #00C4B3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #009687;
+}
+
+/* CALLOUT / INFO BOXES */
+.callout {
+    border-left: 5px solid #00C4B3;
+    background: white;
+    padding: 1rem 1.3rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+/* BUTTONS */
+button, .btn {
+    background: linear-gradient(135deg, #00C4B3, #0043A4);
+    color: white;
+    padding: 0.7rem 1.3rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins';
+}
+
+button:hover, .btn:hover {
+    opacity: 0.9;
+}
+
+/* CODE BLOCKS */
+pre, code {
+    background-color: #0F1624 !important;
+    color: #F4F7FA !important;
+    border-radius: 8px !important;
+    padding: 0.8rem !important;
+    font-size: 0.95rem !important;
+}
+
+/* INLINE CODE */
+code {
+    padding: 0.2rem 0.4rem !important;
+    border-radius: 4px !important;
+}
+
+/* BLOCKQUOTES */
+blockquote {
+    border-left: 4px solid #0043A4;
+    background: #E8EEF7;
+    padding: 1rem 1.2rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+}
+
+/* IMAGES */
+img {
+    border-radius: 10px;
+    margin: 1rem 0;
+    max-width: 100%;
+}
+
+/* TABLES */
+table {
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    width: 100%;
+}
+
+th {
+    background: #0043A4;
+    color: white;
+    padding: 0.6rem;
+}
+
+td {
+    padding: 0.6rem;
+    border-bottom: 1px solid #DDE3EA;
+}
+
+/* CHAPTER TITLE PAGE (OPTIONAL) */
+.quarto-title-block {
+    background: linear-gradient(135deg, #0043A4, #00C4B3);
+    color: white !important;
+    padding: 2rem;
+    border-radius: 10px;
+}
