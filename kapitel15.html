@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>16&nbsp; Performance verstehen – wie gut läuft dein Portfolio? – Smarter Investieren - leicht erklärt</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./kapitel16.html" rel="next">
+<link href="./kapitel14.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-e0fdce12ac1367d4b47c179a2935dd10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-74c88ba48ad0bebf983f0ffd06dd1671.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-e0fdce12ac1367d4b47c179a2935dd10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./kapitel15.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Performance verstehen – wie gut läuft dein Portfolio?</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Smarter Investieren - leicht erklärt</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Willkommen zu „Smarter Investieren – leicht erklärt“</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kapitel1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Warum Investieren heute wichtiger ist als je zuvor</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kapitel2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Was Risiko wirklich bedeutet</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kapitel3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Rendite verstehen: Wie dein Geld für dich arbeitet</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kapitel4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Diversifikation: Das Geheimnis der Profis –einfach erklärt</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kapitel5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ETFs: Die einfachste Möglichkeit, sinnvoll zu investieren</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kapitel6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Was hinter professionellen Anlagestrategien steckt</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kapitel7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Momentum: Investieren mit Trend</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kapitel8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Low Risk: Warum „langweilige“ Aktien oft besser laufen</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kapitel9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Value: Günstig kaufen, gute Unternehmen halten</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kapitel10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Wie Profis Portfolios bauen –intuitiv erklärt</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kapitel11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Schritt 1: Ziele festlegen – Wofür investierst du?</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kapitel12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Schritt 2: Dein Basis-Portfolio erstellen</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kapitel13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Schritt 3: Faktorstrategien ergänzen (für Fortgeschrittene)</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kapitel14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Schritt 4: Dein Portfolio pflegen</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kapitel15.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Performance verstehen – wie gut läuft dein Portfolio?</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kapitel16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Die größten Anlegerfehler – und wie du sie vermeidest</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kapitel17.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Der einfache Investment-Plan, der wirklich funktioniert</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kapitel18.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Bonuskapitel: Wie Profis Python verwenden (einfach erklärt)</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kapitel19.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Glossar der wichtigsten Finanzbegriffe</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#warum-performance-messen-überhaupt-wichtig-ist" id="toc-warum-performance-messen-überhaupt-wichtig-ist" class="nav-link active" data-scroll-target="#warum-performance-messen-überhaupt-wichtig-ist"><span class="header-section-number">16.1</span> Warum Performance messen überhaupt wichtig ist</a></li>
+  <li><a href="#rendite-verstehen-ohne-mathe-wirklich" id="toc-rendite-verstehen-ohne-mathe-wirklich" class="nav-link" data-scroll-target="#rendite-verstehen-ohne-mathe-wirklich"><span class="header-section-number">16.2</span> Rendite verstehen – ohne Mathe, wirklich</a></li>
+  <li><a href="#warum-normale-rendite-eine-unsichtbare-größe-ist" id="toc-warum-normale-rendite-eine-unsichtbare-größe-ist" class="nav-link" data-scroll-target="#warum-normale-rendite-eine-unsichtbare-größe-ist"><span class="header-section-number">16.3</span> Warum „normale Rendite“ eine unsichtbare Größe ist</a></li>
+  <li><a href="#der-richtige-vergleichsmaßstab-deine-persönliche-benchmark" id="toc-der-richtige-vergleichsmaßstab-deine-persönliche-benchmark" class="nav-link" data-scroll-target="#der-richtige-vergleichsmaßstab-deine-persönliche-benchmark"><span class="header-section-number">16.4</span> Der richtige Vergleichsmaßstab – deine persönliche Benchmark</a></li>
+  <li><a href="#drawdown-der-unterschied-zwischen-verlust-und-risiko" id="toc-drawdown-der-unterschied-zwischen-verlust-und-risiko" class="nav-link" data-scroll-target="#drawdown-der-unterschied-zwischen-verlust-und-risiko"><span class="header-section-number">16.5</span> Drawdown – der Unterschied zwischen Verlust und Risiko</a></li>
+  <li><a href="#volatilität-der-gefühlsfaktor-in-deiner-performance" id="toc-volatilität-der-gefühlsfaktor-in-deiner-performance" class="nav-link" data-scroll-target="#volatilität-der-gefühlsfaktor-in-deiner-performance"><span class="header-section-number">16.6</span> Volatilität – der „Gefühlsfaktor“ in deiner Performance</a></li>
+  <li><a href="#sharpe-ratio-die-fairste-messgröße-aber-ohne-mathe" id="toc-sharpe-ratio-die-fairste-messgröße-aber-ohne-mathe" class="nav-link" data-scroll-target="#sharpe-ratio-die-fairste-messgröße-aber-ohne-mathe"><span class="header-section-number">16.7</span> Sharpe Ratio – die fairste Messgröße (aber ohne Mathe)</a></li>
+  <li><a href="#zwischenfazit-warum-performance-mehr-ist-als-eine-zahl" id="toc-zwischenfazit-warum-performance-mehr-ist-als-eine-zahl" class="nav-link" data-scroll-target="#zwischenfazit-warum-performance-mehr-ist-als-eine-zahl"><span class="header-section-number">16.8</span> Zwischenfazit – Warum Performance mehr ist als eine Zahl</a></li>
+  <li><a href="#wie-du-deine-performance-richtig-misst-ohne-excel-ohne-mathe" id="toc-wie-du-deine-performance-richtig-misst-ohne-excel-ohne-mathe" class="nav-link" data-scroll-target="#wie-du-deine-performance-richtig-misst-ohne-excel-ohne-mathe"><span class="header-section-number">16.9</span> Wie du deine Performance richtig misst – ohne Excel, ohne Mathe</a></li>
+  <li><a href="#die-häufigsten-fehler-bei-der-performance-betrachtung" id="toc-die-häufigsten-fehler-bei-der-performance-betrachtung" class="nav-link" data-scroll-target="#die-häufigsten-fehler-bei-der-performance-betrachtung"><span class="header-section-number">16.10</span> Die häufigsten Fehler bei der Performance-Betrachtung</a></li>
+  <li><a href="#ein-einfaches-system-um-performance-intuitiv-zu-beurteilen" id="toc-ein-einfaches-system-um-performance-intuitiv-zu-beurteilen" class="nav-link" data-scroll-target="#ein-einfaches-system-um-performance-intuitiv-zu-beurteilen"><span class="header-section-number">16.11</span> Ein einfaches System, um Performance intuitiv zu beurteilen</a></li>
+  <li><a href="#wie-lisa-und-samir-ihre-performance-betrachten-ein-jahresgespräch" id="toc-wie-lisa-und-samir-ihre-performance-betrachten-ein-jahresgespräch" class="nav-link" data-scroll-target="#wie-lisa-und-samir-ihre-performance-betrachten-ein-jahresgespräch"><span class="header-section-number">16.12</span> Wie Lisa und Samir ihre Performance betrachten – ein Jahresgespräch</a></li>
+  <li><a href="#die-psychologie-der-performance-warum-geduld-die-wichtigste-fähigkeit-ist" id="toc-die-psychologie-der-performance-warum-geduld-die-wichtigste-fähigkeit-ist" class="nav-link" data-scroll-target="#die-psychologie-der-performance-warum-geduld-die-wichtigste-fähigkeit-ist"><span class="header-section-number">16.13</span> Die Psychologie der Performance – warum Geduld die wichtigste Fähigkeit ist</a></li>
+  <li><a href="#was-du-aus-diesem-kapitel-mitnehmen-solltest" id="toc-was-du-aus-diesem-kapitel-mitnehmen-solltest" class="nav-link" data-scroll-target="#was-du-aus-diesem-kapitel-mitnehmen-solltest"><span class="header-section-number">16.14</span> Was du aus diesem Kapitel mitnehmen solltest</a></li>
+  <li><a href="#zum-nachdenken" id="toc-zum-nachdenken" class="nav-link" data-scroll-target="#zum-nachdenken"><span class="header-section-number">16.15</span> Zum Nachdenken</a></li>
+  <li><a href="#ausblick" id="toc-ausblick" class="nav-link" data-scroll-target="#ausblick"><span class="header-section-number">16.16</span> Ausblick</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Performance verstehen – wie gut läuft dein Portfolio?</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Es gibt diesen einen Moment, den alle Anleger früher oder später erleben: Du öffnest die App deines Brokers, schaust auf dein Portfolio – und fragst dich: „War das jetzt gut? Oder hätte ich mehr rausholen können?“</p>
+<p>Lisa kennt diesen Moment gut. Nach einem Jahr Investieren fühlt sie sich sicherer als früher, aber sobald sie die Performance-Zahlen sieht, rutscht ihr Herz trotzdem kurz in die Hose. „Plus 7,8 %. Klingt eigentlich gut“, sagt sie, „aber ist das <em>wirklich</em> gut?“</p>
+<p>Samir lacht. „Das hängt davon ab, womit du es vergleichst.“ „Super“, antwortet Lisa trocken. „Also weiß ich es eigentlich gar nicht.“</p>
+<p>Und genau deshalb gibt es dieses Kapitel.</p>
+<p>Du lernst hier – ohne Mathematik, ohne Formeln und ohne Stress – wie du die Performance deiner Anlagen intuitiv und richtig beurteilst. Nicht, ob sie „perfekt“ war (das ist sie nie), sondern ob du auf einem guten Weg bist. Und ob du als langfristige Anlegerin oder Anleger das tust, was wirklich zählt.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/15/ABB151.png" class="img-fluid figure-img"></p>
+<figcaption>ABB. 16.1: Der Performance-Kompass</figcaption>
+</figure>
+</div>
+<section id="warum-performance-messen-überhaupt-wichtig-ist" class="level2" data-number="16.1">
+<h2 data-number="16.1" class="anchored" data-anchor-id="warum-performance-messen-überhaupt-wichtig-ist"><span class="header-section-number">16.1</span> Warum Performance messen überhaupt wichtig ist</h2>
+<p>Viele Anfänger glauben, dass Performance messen bedeutet, ständig hinter jeder Zahl herzurennen, jede Woche die Gewinne zu checken oder im Monatsrhythmus Vergleiche zu ziehen. Das Gegenteil ist der Fall.</p>
+<p>Performance verstehen heißt:</p>
+<pre><code>👉 Ruhe statt Panik
+👉 Orientierung statt Rätselraten
+👉 Klarheit statt Bauchgefühl</code></pre>
+<p>Wenn du weißt, wie man die Entwicklung seines Portfolios <em>richtig</em> misst, kann dich kaum etwas aus der Bahn werfen. Besonders wichtig ist das aus drei Gründen:</p>
+<p><strong>1. Du erkennst, ob du deinen eigenen Plan einhältst.</strong></p>
+<p>Nicht der Markt ist dein Maßstab, sondern dein persönliches Ziel. Hast du langfristig investiert? Sparst du regelmäßig? Rebalancierst du? Die Performance sagt dir, ob du deiner eigenen Strategie treu geblieben bist.</p>
+<p><strong>2. Du siehst, ob dein Risiko angemessen ist.</strong></p>
+<p>Ein Portfolio kann 20 % Gewinn machen – und gleichzeitig viel zu riskant für deine Lebenssituation sein. Oder es kann 3 % machen – und vollkommen perfekt sein.</p>
+<p><strong>3. Du verhinderst gefährliche Fehlinterpretationen.</strong></p>
+<p>Menschen neigen dazu, gute Phasen zu überschätzen und schlechte Phasen zu dramatisieren. Ein klarer Performance-Kompass schützt dich davor.</p>
+<p>Samir fasst es gut zusammen:</p>
+<blockquote class="blockquote">
+<p>„Performance messen heißt nicht, das perfekte Ergebnis zu finden – sondern zu verstehen, <em>was</em> passiert ist und <em>warum</em>.“</p>
+</blockquote>
+</section>
+<section id="rendite-verstehen-ohne-mathe-wirklich" class="level2" data-number="16.2">
+<h2 data-number="16.2" class="anchored" data-anchor-id="rendite-verstehen-ohne-mathe-wirklich"><span class="header-section-number">16.2</span> Rendite verstehen – ohne Mathe, wirklich</h2>
+<p>Wenn Anfänger nach drei Monaten minus 3 % sehen, fühlen sich viele schlecht. Wenn sie plus 5 % sehen, fühlen sie sich plötzlich genial.</p>
+<p>Beides ist falsch.</p>
+<p>Rendite sieht nur kurzfristig aus wie ein Urteil über deinen Erfolg. Langfristig ist sie eher eine Momentaufnahme – wie das Wetter.</p>
+<pre><code>👉 Rendite ist wie die Temperatur eines Tages.</code></pre>
+<ul>
+<li>Ein kalter Tag ist nicht schlimm.<br>
+</li>
+<li>Ein heißer Tag bedeutet nicht, dass die ganze Woche so wird.<br>
+</li>
+<li>Keine einzelne Zahl sagt dir, ob du „gut“ unterwegs bist.</li>
+</ul>
+<p>Und doch ist Rendite eine der wichtigsten Kennzahlen, die wir haben.</p>
+<p>Damit du sie intuitiv verstehst, reicht eine einfache Definition:</p>
+<blockquote class="blockquote">
+<p><strong>Rendite zeigt dir, wie stark dein Geld in einem bestimmten Zeitraum gearbeitet hat – unabhängig davon, wie viel du einzahlst.</strong></p>
+</blockquote>
+<p>Das bedeutet: Ob du 100 € oder 10.000 € investiert hast – „+5 %“ meint denselben wirtschaftlichen Effekt: dein Kapital hat sich um fünf Prozent verändert.</p>
+<p>Was Rendite <em>nicht</em> ist:</p>
+<ul>
+<li>ein Qualitätsurteil<br>
+</li>
+<li>ein Hinweis auf deine Intelligenz<br>
+</li>
+<li>eine Prognose<br>
+</li>
+<li>ein Versprechen für die Zukunft</li>
+</ul>
+<p>Rendite sagt nur, wo dein Portfolio jetzt steht.</p>
+</section>
+<section id="warum-normale-rendite-eine-unsichtbare-größe-ist" class="level2" data-number="16.3">
+<h2 data-number="16.3" class="anchored" data-anchor-id="warum-normale-rendite-eine-unsichtbare-größe-ist"><span class="header-section-number">16.3</span> Warum „normale Rendite“ eine unsichtbare Größe ist</h2>
+<p>Einer der größten Fehler junger Anleger ist, Renditen fehlzuinterpretieren. Lisa macht es übrigens auch, obwohl sie strukturiert und klug vorgeht.</p>
+<p>An einem Tag erzählt sie Samir stolz: „Mein ETF hat dieses Jahr 11 % gemacht! Voll gut, oder?“</p>
+<p>Samir zuckt mit den Schultern: „Kommt drauf an. Wie viel hat der Vergleichsindex gemacht?“</p>
+<p>Stille.</p>
+<p>Sie weiß es nicht.</p>
+<p>Und das ist normal.</p>
+<pre><code>👉 Rendite ist nur dann interpretiertbar, wenn du sie in den richtigen Kontext setzt.</code></pre>
+<p>Ohne Kontext wirken Zahlen entweder extrem gut oder extrem schlecht. Aber erst der Vergleich macht sie sinnvoll.</p>
+<p>Stell dir vor:</p>
+<ul>
+<li>Dein ETF hat +11 % gemacht.<br>
+</li>
+<li>Der globale Aktienmarkt hat +23 % gemacht.</li>
+</ul>
+<p>Klingt deine Zahl jetzt immer noch gut? Plötzlich eher… mittelmäßig.</p>
+<p>Oder:</p>
+<ul>
+<li>Dein Portfolio hat –4 % gemacht.<br>
+</li>
+<li>Der Markt hat –12 % gemacht.</li>
+</ul>
+<p>Auf einmal ist dein Ergebnis ziemlich solide, oder?</p>
+<p>Deshalb gibt es im Investieren niemals „gut“ oder „schlecht“ im luftleeren Raum.</p>
+</section>
+<section id="der-richtige-vergleichsmaßstab-deine-persönliche-benchmark" class="level2" data-number="16.4">
+<h2 data-number="16.4" class="anchored" data-anchor-id="der-richtige-vergleichsmaßstab-deine-persönliche-benchmark"><span class="header-section-number">16.4</span> Der richtige Vergleichsmaßstab – deine persönliche Benchmark</h2>
+<p>Eine Benchmark ist wie der Trainingspartner beim Joggen: Er erlaubt dir einzuschätzen, ob du in einem sinnvollen Tempo unterwegs bist.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/15/ABB153.png" class="img-fluid figure-img"></p>
+<figcaption>ABB. 16.2: Benchmark-Vergleich</figcaption>
+</figure>
+</div>
+<p>Du brauchst eigentlich nur zwei Benchmarks:</p>
+<p><strong>📌 Benchmark 1: Dein persönlicher Plan</strong></p>
+<p>Der wichtigste Maßstab. Er beantwortet Fragen wie:</p>
+<ul>
+<li>Bist du auf Kurs für deine langfristigen Ziele?<br>
+</li>
+<li>Passt die Entwicklung zu deinem Risikoprofil?<br>
+</li>
+<li>Liegst du ungefähr in dem Renditebereich, den du ursprünglich erwartet hast?</li>
+</ul>
+<p><strong>📌 Benchmark 2: Der passende Marktvergleich</strong></p>
+<p>Wenn du einen Welt-ETF hast, dann ist der MSCI World oder ACWI der passende Vergleich. Wenn du ein Value- oder Momentum-Overlay hast, passt ein Faktorindex.</p>
+<p>Aber Vorsicht: Es geht nicht darum, <em>besser</em> zu sein als der Markt. Es geht darum, <em>zu verstehen</em>, warum du anders läufst.</p>
+<p>Wenn dein Portfolio stabiler ist, hast du bewusst weniger Risiko genommen. Wenn es stärker schwankt, hast du bewusst mehr Risiko gewählt. Wenn es langfristig mehr Rendite erzielt, war das vielleicht eine gute Extra-Prämie.</p>
+<p>Aber egal was passiert: Du brauchst ein Referenzsystem, damit du nicht im Nebel tappst.</p>
+</section>
+<section id="drawdown-der-unterschied-zwischen-verlust-und-risiko" class="level2" data-number="16.5">
+<h2 data-number="16.5" class="anchored" data-anchor-id="drawdown-der-unterschied-zwischen-verlust-und-risiko"><span class="header-section-number">16.5</span> Drawdown – der Unterschied zwischen Verlust und Risiko</h2>
+<p>Drawdown klingt kompliziert, ist aber eigentlich einfach: Es ist der größte Rückgang deines Portfolios vom bisherigen Höchststand.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/15/ABB152.png" class="img-fluid figure-img"></p>
+<figcaption>ABB. 16.3: Drawdowns verstehen</figcaption>
+</figure>
+</div>
+<p>Das heißt: Wenn dein Portfolio bei 100 € steht und irgendwann auf 80 € fällt, hattest du einen Drawdown von 20 %.</p>
+<p>Warum ist das wichtig?</p>
+<p>Weil Drawdowns zeigen, wie „schmerzhaft“ eine Strategie werden kann.</p>
+<p>Lisa erinnert sich an 2022, als ihr Portfolio plötzlich stark gefallen ist. „Ich dachte kurz, alles bricht zusammen“, sagt sie. Aber Samir erklärt es ihr anders:</p>
+<blockquote class="blockquote">
+<p>„Drawdowns sind wie das Winterwetter – unangenehm, aber normal für das Klima.“</p>
+</blockquote>
+<p>👉 <strong>Was ein Drawdown dir sagt:</strong></p>
+<ul>
+<li>Wie groß die Schwankungen deiner Strategie sein können<br>
+</li>
+<li>Wie viel emotionale Belastbarkeit du brauchst<br>
+</li>
+<li>Ob du langfristig mit diesem Risiko leben kannst</li>
+</ul>
+<p>👉 <strong>Was ein Drawdown dir NICHT sagt:</strong></p>
+<ul>
+<li>Dass deine Strategie schlecht ist<br>
+</li>
+<li>Dass du etwas ändern musst<br>
+</li>
+<li>Dass die Zukunft genauso aussehen wird</li>
+</ul>
+<p>Fakt ist: Jede renditestarke Anlage hat Drawdowns. Ohne sie gäbe es keine Rendite.</p>
+</section>
+<section id="volatilität-der-gefühlsfaktor-in-deiner-performance" class="level2" data-number="16.6">
+<h2 data-number="16.6" class="anchored" data-anchor-id="volatilität-der-gefühlsfaktor-in-deiner-performance"><span class="header-section-number">16.6</span> Volatilität – der „Gefühlsfaktor“ in deiner Performance</h2>
+<p>Volatilität bedeutet: wie stark schwankt dein Portfolio?</p>
+<p>Je höher die Volatilität, desto nervenaufreibender kann es sich anfühlen. Und das Erstaunliche ist: Zwei Portfolios mit gleicher Rendite können sich völlig unterschiedlich anfühlen.</p>
+<p>👉 <strong>Beispiel:</strong></p>
+<ul>
+<li>Portfolio A: Wenige Schwankungen, Rendite +7 %<br>
+</li>
+<li>Portfolio B: Wilde Schwankungen, Rendite +7 %</li>
+</ul>
+<p>Lisa würde intuitiv A bevorzugen, weil es ruhiger wirkt. Samir könnte B bevorzugen, wenn er langfristig mehr Renditepotenzial sieht.</p>
+<p>Volatilität ist also kein „Urteil“. Es ist eine Charaktereigenschaft deines Portfolios. So wie ein Mensch eher ruhig oder eher impulsiv sein kann.</p>
+</section>
+<section id="sharpe-ratio-die-fairste-messgröße-aber-ohne-mathe" class="level2" data-number="16.7">
+<h2 data-number="16.7" class="anchored" data-anchor-id="sharpe-ratio-die-fairste-messgröße-aber-ohne-mathe"><span class="header-section-number">16.7</span> Sharpe Ratio – die fairste Messgröße (aber ohne Mathe)</h2>
+<p>Die Sharpe Ratio ist eigentlich eine mathematische Kennzahl. Aber das Konzept dahinter lässt sich ganz einfach beschreiben:</p>
+<blockquote class="blockquote">
+<p><strong>Die Sharpe Ratio zeigt dir, wie viel Rendite du pro Einheit Risiko bekommst.</strong></p>
+</blockquote>
+<p>Das klingt abstrakt, ist aber intuitiv:</p>
+<ul>
+<li>Wenn ein Portfolio viel Rendite macht, aber dabei kaum schwankt → sehr gut.<br>
+</li>
+<li>Wenn ein Portfolio viel schwankt, aber kaum Rendite macht → eher ineffizient.<br>
+</li>
+<li>Wenn beides im gesunden Verhältnis steht → solide.</li>
+</ul>
+<p>Lisa nennt die Sharpe Ratio gern „den Fairness-Faktor“.</p>
+<p>Denn sie beantwortet eine der wichtigsten Fragen im Investieren:</p>
+<blockquote class="blockquote">
+<p>„Wie viel Stress bekomme ich für meine Rendite?“</p>
+</blockquote>
+<p>Das Schöne daran: Du musst nichts berechnen. Die Sharpe Ratio kann dir helfen, Strategien intuitiv zu vergleichen – wenn dein Broker oder eine App sie anzeigt.</p>
+</section>
+<section id="zwischenfazit-warum-performance-mehr-ist-als-eine-zahl" class="level2" data-number="16.8">
+<h2 data-number="16.8" class="anchored" data-anchor-id="zwischenfazit-warum-performance-mehr-ist-als-eine-zahl"><span class="header-section-number">16.8</span> Zwischenfazit – Warum Performance mehr ist als eine Zahl</h2>
+<p>An diesem Punkt sollte dir klar werden:</p>
+<ul>
+<li>Performance ist kein Endurteil.<br>
+</li>
+<li>Performance ist ein Kompass.<br>
+</li>
+<li>Performance sagt dir, ob du auf deinem langfristigen Pfad bleibst.<br>
+</li>
+<li>Performance zeigt dir Risiken, nicht nur Ergebnisse.<br>
+</li>
+<li>Performance hilft dir Geduld zu entwickeln – und Panik zu vermeiden.</li>
+</ul>
+<p>Aber es fehlt noch ein zentraler Teil:</p>
+<blockquote class="blockquote">
+<p><strong>Wie misst man Performance im Alltag richtig – Monat für Monat, Jahr für Jahr, ohne sich zu stressen?</strong></p>
+</blockquote>
+<p>Das lernst du in den folgenden Abschnitten.</p>
+</section>
+<section id="wie-du-deine-performance-richtig-misst-ohne-excel-ohne-mathe" class="level2" data-number="16.9">
+<h2 data-number="16.9" class="anchored" data-anchor-id="wie-du-deine-performance-richtig-misst-ohne-excel-ohne-mathe"><span class="header-section-number">16.9</span> Wie du deine Performance richtig misst – ohne Excel, ohne Mathe</h2>
+<p>Nachdem wir über die wichtigsten Begriffe gesprochen haben, geht es jetzt um die Praxis: Wie misst du deine Performance im Alltag eigentlich sinnvoll?</p>
+<p>Viele Anfänger tappen in eine gefährliche Falle:</p>
+<blockquote class="blockquote">
+<p><strong>Sie messen ständig – aber falsch.</strong></p>
+</blockquote>
+<p>Lisa kennt das gut. „Als ich anfing zu investieren“, sagt sie, „habe ich jeden Tag die App geöffnet. Es war wie Zähneknirschen. Hat nicht wirklich geholfen.“</p>
+<p>Samir lächelt. „Daily Checking ist wie jeden Tag auf die Waage gehen. Einzelne Messpunkte sagen dir nichts.“</p>
+<p>Also, wie misst man richtig?</p>
+<hr>
+<p><strong>Regel Nr. 1: Nimm einen festen Rhythmus</strong></p>
+<p>Die meisten erfolgreichen Anleger nutzen einen dieser Rhythmen:</p>
+<ul>
+<li><strong>Monatlich</strong> (für Anfänger, die noch Sicherheit suchen)<br>
+</li>
+<li><strong>Quartalsweise</strong> (optimal für die meisten)<br>
+</li>
+<li><strong>Jährlich</strong> (für alle, die langfristig denken)</li>
+</ul>
+<p>Samir sagt es Lisa immer so:</p>
+<blockquote class="blockquote">
+<p>„Häufig messen bringt Unruhe. Selten messen bringt Gelassenheit.“</p>
+</blockquote>
+<hr>
+<p><strong>Regel Nr. 2: Nutze die Anzeige deiner Broker-App – aber mit Vorsicht</strong></p>
+<p>Fast alle Broker zeigen:</p>
+<ul>
+<li>Gesamtrendite<br>
+</li>
+<li>Rendite pro Jahr<br>
+</li>
+<li>Vergleichsperioden<br>
+</li>
+<li>Ein- und Auszahlungen</li>
+</ul>
+<p>ABER: Viele Apps mischen Einzahlungen und Wertentwicklung, was verwirrend ist.</p>
+<p>Wichtige Faustregel:</p>
+<blockquote class="blockquote">
+<p><strong>Verwechslung vermeiden: Mehr Geld einzahlen ist keine Rendite.</strong></p>
+</blockquote>
+<p>Wenn du viel sparst, steigt dein Depot – das ist kein Erfolg, sondern einfach Disziplin. Rendite misst die Wertentwicklung <em>deiner Anlagen</em>, nicht deiner Sparquote.</p>
+<hr>
+<p><strong>Regel Nr. 3: Vergleiche nur Dinge, die vergleichbar sind</strong></p>
+<p>Ein Welt-ETF wächst anders als Einzelaktien. Ein Momentum-Overlay entwickelt sich anders als ein reiner Index. Ein defensiver Mix schwankt weniger, gewinnt aber auch weniger.</p>
+<p>Ein sinnvoller Vergleich hilft – alles andere irritiert.</p>
+<p>Lisa hat irgendwann aufgehört, ihr Portfolio mit ihren Freundinnen zu vergleichen. „Ich habe gemerkt, dass wir komplett unterschiedliche Dinge tun – und dass Vergleiche uns nur verunsichern.“</p>
+<p>Genau darum geht es:</p>
+<blockquote class="blockquote">
+<p><em>Deine Performance ist ein Spiegel deiner eigenen Strategie – nicht anderer Menschen.</em></p>
+</blockquote>
+</section>
+<section id="die-häufigsten-fehler-bei-der-performance-betrachtung" class="level2" data-number="16.10">
+<h2 data-number="16.10" class="anchored" data-anchor-id="die-häufigsten-fehler-bei-der-performance-betrachtung"><span class="header-section-number">16.10</span> Die häufigsten Fehler bei der Performance-Betrachtung</h2>
+<p>Wer Performance falsch liest, trifft schlechte Entscheidungen. Und die kommen fast immer aus denselben Mustern.</p>
+<p><strong>Fehler 1: Kurzfristiges Denken</strong></p>
+<p>Viele Menschen denken: „Minus 6 %? Das ist schlecht!“ „Plus 10 %? Das ist gut!“</p>
+<p>Beides falsch.</p>
+<p>Marktbewegungen sind kurzfristig reiner Lärm. Es wäre so, als würdest du aus dem Lärm einer Baustelle heraus schließen wollen, ob ein Haus einsturzgefährdet ist.</p>
+<p>Signal vs.&nbsp;Lärm – das ist die zentrale Unterscheidung.</p>
+<p><strong>Fehler 2: Sich von Emotionen leiten lassen</strong></p>
+<p>Angst führt zu Panikverkäufen. Gier führt zu Überinvestition. Beides ist gefährlich.</p>
+<p>Ein gesundes Performance-Tracking macht dich immuner gegen falsche Impulse.</p>
+<p><strong>Fehler 3: Die falschen Benchmarks nutzen</strong></p>
+<p>Wenn du dein Welt-ETF-Portfolio mit Kryptowährungen vergleichst, wirst du verrückt. Wenn du ein defensives Portfolio mit US-Tech-Aktien vergleichst, wirst du frustriert.</p>
+<p><strong>Fehler 4: „Hätte ich doch…“-Denken</strong></p>
+<p>Lisa sagt manchmal: „Hätte ich damals mehr in Tech gesteckt, wäre ich jetzt reich.“</p>
+<p>Samir antwortet: „Wenn wir rückwärts laufen könnten, wären wir alle Marathonläufer.“</p>
+<p>Rückspiegeldenken hilft niemandem. Der einzige sinnvolle Blick ist nach vorne – und auf deine Regeln.</p>
+</section>
+<section id="ein-einfaches-system-um-performance-intuitiv-zu-beurteilen" class="level2" data-number="16.11">
+<h2 data-number="16.11" class="anchored" data-anchor-id="ein-einfaches-system-um-performance-intuitiv-zu-beurteilen"><span class="header-section-number">16.11</span> Ein einfaches System, um Performance intuitiv zu beurteilen</h2>
+<p>Hier ist ein System, das Anfänger wie Profis nutzen können. Es besteht aus vier Fragen, die du dir zu jedem Messzeitpunkt stellst:</p>
+<hr>
+<p><strong>Frage 1: Liegt mein Portfolio im Rahmen meiner Erwartungen?</strong></p>
+<p>Erwartungen dürfen nicht aus der Luft gegriffen sein. Wenn der Weltmarkt +12 % macht und du +9 %, ist das normal. Wenn alles fällt und du fällst auch – ebenfalls normal.</p>
+<p>Erwartungen sind wie die Routenplanung beim Wandern: Sie gibt die Richtung vor, nicht den exakten Weg.</p>
+<hr>
+<p><strong>Frage 2: Passt das Risiko zu mir?</strong></p>
+<p>Hast du nachts gut geschlafen? Hast du in Stressphasen deine Regeln gehalten? Hast du panisch reagiert?</p>
+<p>Das zeigt dir mehr über deine Anlageerfahrung als jede Rendite.</p>
+<hr>
+<p><strong>Frage 3: Haben meine Faktor-Anteile so funktioniert, wie sie sollten?</strong></p>
+<p>Faktorstrategien (Value, Momentum, Low Risk, Quality) sind keine Wundertüten. Sie funktionieren langfristig – nicht kurzfristig.</p>
+<p>Wenn ein Faktor temporär schwächer läuft, ist das normal. Es ist wie Jahreszeiten: Man erwartet keinen Sommer mitten im Winter.</p>
+<hr>
+<p><strong>Frage 4: Halte ich meinen Plan ein?</strong></p>
+<p>Die wichtigste Frage überhaupt.</p>
+<p>Viele Menschen haben eine gute Strategie – aber halten sie nicht durch. Und eine mittelmäßige Strategie, die du durchhältst, ist besser als eine perfekte Strategie, die du ständig änderst.</p>
+</section>
+<section id="wie-lisa-und-samir-ihre-performance-betrachten-ein-jahresgespräch" class="level2" data-number="16.12">
+<h2 data-number="16.12" class="anchored" data-anchor-id="wie-lisa-und-samir-ihre-performance-betrachten-ein-jahresgespräch"><span class="header-section-number">16.12</span> Wie Lisa und Samir ihre Performance betrachten – ein Jahresgespräch</h2>
+<p>Zum Jahresende sitzen Lisa und Samir in einem Café. Beide holen ihre Notizbücher heraus – ein kleines Ritual, das sie seit siebzehn Jahren pflegen.</p>
+<p>Sie beginnen immer gleich:</p>
+<p><strong>Schritt 1: „Was ist dieses Jahr passiert?“</strong></p>
+<p>Keine Bewertungen, keine Gefühle – nur Fakten.</p>
+<p>Lisa liest vor:</p>
+<ul>
+<li>Weltmarkt +19 %<br>
+</li>
+<li>Mein Portfolio +16,5 %<br>
+</li>
+<li>Gründe: Defensiver Anteil, Momentum lag hinten, Value lief gut</li>
+</ul>
+<p>Samir nickt freundlich und beginnt ebenfalls vorzulesen.</p>
+<p><strong>Schritt 2: „Wie war mein Gefühl?“</strong></p>
+<p>Hier geht es um die psychologische Seite.</p>
+<p>Lisa sagt: „Ich war im Frühjahr nervös, habe aber nicht verkauft. Ich habe gemerkt, dass meine Risikotoleranz gewachsen ist.“</p>
+<p>Samir: „Ich war entspannt, aber ich hätte im Sommer fast unnötig umgeschichtet. Gut, dass ich es nicht getan habe.“</p>
+<p><strong>Schritt 3: „Was habe ich gelernt?“</strong></p>
+<p>Lisa: „Dass ich mein Momentum-Overlay behalten will, auch wenn es ein Jahr schwächer lief.“</p>
+<p>Samir: „Dass meine defensiven Komponenten mir Ruhe geben – und das den Renditeverlust wert ist.“</p>
+<p><strong>Schritt 4: „Was ändere ich fürs nächste Jahr?“</strong></p>
+<p>Oft ist die Antwort: nichts.</p>
+<p>Ein stabiles System braucht keine ständigen Updates – es braucht Geduld.</p>
+</section>
+<section id="die-psychologie-der-performance-warum-geduld-die-wichtigste-fähigkeit-ist" class="level2" data-number="16.13">
+<h2 data-number="16.13" class="anchored" data-anchor-id="die-psychologie-der-performance-warum-geduld-die-wichtigste-fähigkeit-ist"><span class="header-section-number">16.13</span> Die Psychologie der Performance – warum Geduld die wichtigste Fähigkeit ist</h2>
+<p>Es gibt eine Wahrheit, die jeder Anleger irgendwann lernt:</p>
+<blockquote class="blockquote">
+<p><strong>Die beste Performance entsteht selten durch große Entscheidungen – sondern durch wenige gute und viele kleine, richtige Nicht-Entscheidungen.</strong></p>
+</blockquote>
+<p>Geduld ist eine Form von Kapital. Wer sie hat, braucht weniger Glück. Wer sie nicht hat, wird selbst perfekte Strategien ruinieren.</p>
+<p>Warum ist Geduld so wichtig?</p>
+<p><strong>1. Märkte belohnen langfristiges Verhalten</strong></p>
+<p>Alle langfristigen Daten zeigen: Je länger du investiert bist, desto unwahrscheinlicher werden negative Jahre.</p>
+<p><strong>2. Geduld reduziert Fehler</strong></p>
+<p>Impulsive Entscheidungen sind der größte Performance-Killer.</p>
+<p><strong>3. Geduld hilft dir, Drawdowns zu überstehen</strong></p>
+<p>In jedem Jahrzehnt gibt es mindestens einen größeren Rücksetzer. Wer den durchsteht, gehört zu den Gewinnern.</p>
+<p><strong>4. Geduld respektiert Wahrscheinlichkeiten</strong></p>
+<p>Investieren ist kein Glücksspiel – aber es ist planbar nur über lange Zeiträume.</p>
+<p>Lisa hat das nach drei Jahren selbst gemerkt: „Ich fühle mich viel entspannter, seit ich verstanden habe, dass Geduld keine Passivität ist – sondern eine aktive Strategie.“</p>
+</section>
+<section id="was-du-aus-diesem-kapitel-mitnehmen-solltest" class="level2" data-number="16.14">
+<h2 data-number="16.14" class="anchored" data-anchor-id="was-du-aus-diesem-kapitel-mitnehmen-solltest"><span class="header-section-number">16.14</span> Was du aus diesem Kapitel mitnehmen solltest</h2>
+<pre><code>👉 Performance ist kein Urteil – sondern ein Werkzeug.
+👉 Der richtige Vergleichsmaßstab ist entscheidend.
+👉 Drawdowns sind normal, gehören dazu und sagen nichts über die Zukunft.
+👉 Volatilität beschreibt das „Gefühl“ deines Portfolios.
+👉 Die Sharpe Ratio zeigt dir das Verhältnis von Rendite zu Stress – ohne dass du rechnen musst.
+👉 Ein guter Rhythmus (monatlich, quartalsweise oder jährlich) bringt Klarheit und Ruhe.
+👉 Die vier Performance-Fragen helfen dir bei jeder Bewertung.
+👉 Die beste Performance entsteht durch Geduld, Disziplin und wenige gute Entscheidungen.</code></pre>
+</section>
+<section id="zum-nachdenken" class="level2" data-number="16.15">
+<h2 data-number="16.15" class="anchored" data-anchor-id="zum-nachdenken"><span class="header-section-number">16.15</span> Zum Nachdenken</h2>
+<pre><code>👉 Wie oft misst du aktuell deine Performance – und warum?
+👉 Hast du Erwartungen, die aus sozialen Vergleichen stammen?
+👉 Welche Phase hat dich emotional am meisten herausgefordert – und warum?
+👉 Welche Einsicht aus diesem Kapitel wird dich langfristig am stärksten verändern?</code></pre>
+<p>Manchmal sind es die stillen Erkenntnisse, die uns zum stärksten Anleger machen.</p>
+</section>
+<section id="ausblick" class="level2" data-number="16.16">
+<h2 data-number="16.16" class="anchored" data-anchor-id="ausblick"><span class="header-section-number">16.16</span> Ausblick</h2>
+<p>Im nächsten Kapitel wechseln wir die Perspektive: Bisher hast du verstanden, was Performance bedeutet. Jetzt wirst du lernen, <strong>wie man die größten Fehler vermeidet</strong>, die Performance ruinieren können.</p>
+<p>Freu dich auf Kapitel 17 – dort wird es sehr praktisch: Emotionen, Übermut, Panik, FOMO – und wie du all das in Griff bekommst.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./kapitel14.html" class="pagination-link" aria-label="Schritt 4: Dein Portfolio pflegen">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Schritt 4: Dein Portfolio pflegen</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./kapitel16.html" class="pagination-link" aria-label="Die größten Anlegerfehler – und wie du sie vermeidest">
+        <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Die größten Anlegerfehler – und wie du sie vermeidest</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
